@@ -1,15 +1,120 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculadora de Freela - He4rtDevs</title>
-    <link rel="stylesheet" href="./main.css" />
-  </head>
-  <body>
-    <div>
-      <h1>Olá mundo.</h1>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-COMPATIBLE" content="ie=edge" />
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap" rel="stylesheet" />
+    <title>Freela Calculator</title>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="imgs/heart-logo.png" alt="He4rt Logo">
+        </div>
+        <div class="headerTitle">
+            <h2>Calculadora de Freela</h1>
+        </div>
+        <div class="Tribute">
+            <h4> Made by <a class="githubLink" href="https://github.com/jhonrmelo">Jonathan Melo</a></h4>
+        </div>
+    </nav>
+
+    <div class="divTitle">
+        <h1 id="headerTitle">Calculadora</h3>
     </div>
-    <script src="./main.js"></script>
-  </body>
+    <div class="content">
+        <div class="valueContent">
+            <div class="cards">
+                <div class="buttons">
+                    <button class="btnRegra" id="btnViewRegras"> Regras</button>
+                </div>
+                <div class="card">
+                    <h2>Tempo Diário</H2>
+                    <hr>
+                    <input id="inputTempo" onkeypress=" return isNumberKey(this)">
+                </div>
+                <div class="card">
+                    <h2>Dias Efetivos</H2>
+                    <hr>
+                    <input id="inputDiasEfetivos" onkeypress="  return isNumberKey(this)">
+                </div>
+                <div class="card">
+                    <h2>Dias de Férias </H2>
+                    <hr>
+                    <input id="inputFerias" onkeypress="  return  isNumberKey(this)">
+                </div>
+                <div class="card">
+                    <h2>Valor Total</H2>
+                    <hr>
+                    <input id="inputValor" onkeypress="  return isNumberKey(this)">
+                </div>
+            </div>
+            <div class="result">
+                <h3>Valor total: <span class="value" id="spanValue">R$ 0</span></h3>
+            </div>
+        </div>
+        <div class="infoContent display-none">
+            <div class="buttonCalc">
+                <button class="btnCalc" id="btnViewCalc">Calculadora </button>
+            </div>
+
+            <div class="infoCards">
+                <div class="infoCard">
+                    <div class="infoHeader">
+                        <h3>Tempo Diário</h2>
+                    </div>
+                    <hr>
+                    <div class="infoText">
+                        <p>Esse é o tempo que foi utilizado para a criação do seu freela, podendo incluir pesquisas,
+                            codificação
+                            e estruturação </p>
+                    </div>
+                </div>
+                <div class="infoCard">
+                    <div class="infoHeader">
+                        <h3>Dias Efetivos</H3>
+                    </div>
+                    <hr>
+                    <div class="infoText">
+                        Os dias efetivos são o total de dias completos que foram utilizados para a criação do freela
+                    </div>
+                </div>
+
+                <div class="infoCard">
+                    <div class="infoHeader">
+                        <h3>Dias de Férias </H3>
+                    </div>
+                    <hr>
+                    <div class="infoText">
+                        Os dias de férias são aqueles dias que você tirou para descanso, isso influencia diretamente
+                        no
+                        valor final
+                    </div>
+                </div>
+
+                <div class="infoCard">
+                    <div class="infoHeader">
+                        <h3>Valor Total</H3>
+                    </div>
+                    <hr>
+                    <div class="infoText">
+                        Valor total é o valor a ser recebido pelo freela, em cima desse valor é executado o nosso
+                        calculo
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+
+    <script type="text/javascript" src="main.js"> </script>
+
+</body>
+
 </html>
