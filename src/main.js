@@ -7,6 +7,9 @@ let inputDiasEfetivos = document.getElementById('inputDiasEfetivos');
 let inputFerias = document.getElementById('inputFerias');
 let inputValor = document.getElementById('inputValor');
 let spanValue = document.getElementById('spanValue');
+let inputs = document.querySelectorAll('input');
+
+inputs.forEach(input => input.addEventListener('input', ExecutaCalculo));
 
 document.getElementById('btnViewCalc').addEventListener('click', () => {
     headerTitle.innerHTML = 'Calculadora';
@@ -20,10 +23,7 @@ document.getElementById('btnViewRegras').addEventListener('click', () => {
     viewRegras.classList.remove('display-none');
 });
 
-inputTempo.addEventListener('input', ExecutaCalculo);
-inputDiasEfetivos.addEventListener('input', ExecutaCalculo);
-inputFerias.addEventListener('input', ExecutaCalculo);
-inputValor.addEventListener('input', ExecutaCalculo);
+
 
 function ValidaInputs() {
     if (inputTempo.value === '' || inputFerias.value === '' || inputValor.value === '' || inputDiasEfetivos.value === '')
